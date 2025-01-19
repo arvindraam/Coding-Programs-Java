@@ -7,5 +7,7 @@ public class HelloWorld {
         System.out.println("Hello World!");
         System.out.println("Hello Universe!");
         System.out.println("Hello Everything!");
+
+        System.out.println(System.getProperty("java.runtime.version"));
     }
 }
