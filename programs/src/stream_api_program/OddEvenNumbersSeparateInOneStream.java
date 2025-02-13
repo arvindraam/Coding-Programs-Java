@@ -28,16 +28,20 @@ public class OddEvenNumbersSeparateInOneStream {
         Map<Boolean, List<Integer>> response = arrList.stream().collect(Collectors.partitioningBy(n -> n % 2 == 0));
 
         System.out.println(response.entrySet());
+        // output : [false=[7, 1, 19], true=[24]]
 
         List<Integer> evens = response.get(true);
         List<Integer> odds = response.get(false);
 
         System.out.println(evens);
+        // output : [24]
         System.out.println(odds);
+        // output : [7, 1, 19]
 
-        Map<Boolean, List<Integer>> responses = arrList.stream().collect(Collectors.groupingBy(n->n % 2 == 0 ? Boolean.TRUE : Boolean.FALSE));
+        Map<Boolean, List<Integer>> responses = arrList.stream().collect(Collectors.groupingBy(n -> n % 2 == 0 ? Boolean.TRUE : Boolean.FALSE));
 
         System.out.println(responses.entrySet());
+        // output : [false=[7, 1, 19], true=[24]]
     }
 
 }

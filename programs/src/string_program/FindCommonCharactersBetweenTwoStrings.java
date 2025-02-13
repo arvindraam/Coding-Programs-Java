@@ -27,6 +27,7 @@ public class FindCommonCharactersBetweenTwoStrings {
 
         // Print the common characters
         System.out.println("Common characters: " + commonSet);
+        // output : Common characters: [r, i]
 
     }
 

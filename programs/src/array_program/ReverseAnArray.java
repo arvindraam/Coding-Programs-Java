@@ -15,15 +15,18 @@ public class ReverseAnArray {
         // sorting purpose
         Arrays.sort(arrSort);
         System.out.println("Inbuilt arrays sort : " + Arrays.toString(arrSort));
+        // output : Inbuilt arrays sort : [1, 7, 19, 24]
 
         // reverse purpose
         // List<Integer> arrListOne = new ArrayList<>(Arrays.asList(1, 4, 3, 2, 6, 5));
         List<Integer> arrList = new ArrayList<>(Arrays.stream(arr).boxed().toList());
         Collections.reverse(arrList);
         System.out.println("Inbuilt collections reverse : " + arrList);
+        // output : Inbuilt collections reverse : [19, 1, 24, 7]
         // sorting purpose
         Collections.sort(arrList);
         System.out.println("Inbuilt collections sort : " + arrList);
+        // output : Inbuilt collections sort : [1, 7, 19, 24]
 
         reverseAnArrayWithoutUsingInBuiltMethods(arr);
 
@@ -41,6 +44,7 @@ public class ReverseAnArray {
         }
 
         System.out.println("Reversed Array using for loop total length / 2 : " + Arrays.toString(array));
+        // output : Reversed Array using for loop total length / 2 : [19, 1, 24, 7]
     }
 
     // Time Complexity O(N) Space Complexity O(N)
@@ -48,6 +52,7 @@ public class ReverseAnArray {
         int len = array.length;
         reverseAnArrayRecursively(array, 0, len - 1);
         System.out.println("Reversed Array Recursively : " + Arrays.toString(array));
+        // output : Reversed Array Recursively : [7, 24, 1, 19]
     }
 
     public static void reverseAnArrayRecursively(int[] array, int leftMostIndex, int rightMostIndex) {

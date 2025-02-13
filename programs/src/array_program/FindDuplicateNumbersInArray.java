@@ -31,11 +31,13 @@ public class FindDuplicateNumbersInArray {
         }
         // enhanced for loop
         System.out.println(map.entrySet());
+        // output : [2=2, 3=1]
 
         // another for loop to print result
         for (int key : map.keySet()) {
             if (map.get(key) > 1) {
                 System.out.println("Duplicate number found : " + key);
+                // output : Duplicate number found : 2
             }
         }
     }
